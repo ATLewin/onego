@@ -1,0 +1,2 @@
+// Package onego
+package onego
