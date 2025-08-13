@@ -26,6 +26,11 @@ const (
 	ModelGptO3DeepResearch Model = "GPT-o3-DeepResearch"
 	ModelGptO3Mini         Model = "GPT-o3-Mini"
 	ModelGptO1Mini         Model = "GPT-o1-Mini"
+	ModelGpt5 			   Model = "GPT-5"
+	ModelGpt5Mini 		   Model = "GPT-5-Mini"
+	ModelGpt5Nano		   Model = "GPT-5-Nano"
+	ModelGpt5ChatLatest    Model = "GPT-5-Chat-Latest"
+
 
 	// ==== Anthropic ====
 	ModelClaudeOpus4     Model = "Opus-4"
@@ -63,53 +68,6 @@ const (
 	ModelPixtral12B      Model = "Pixtral-12B"
 	ModelMistralNemo     Model = "Mistral-NeMo"
 )
-
-var ModelPrices = map[Model]uint32{
-	ModelGpt4_1:            1040,
-	ModelGpt4_1Mini:        208,
-	ModelGpt4_1Nano:        52,
-	ModelGptO3:             1040,
-	ModelGptO4Mini:         572,
-	ModelGptO3Pro:          10400,
-	ModelGpt4o:             1300,
-	ModelGpt4oMini:         78,
-	ModelGptO1:             7800,
-	ModelGptO3DeepResearch: 5200,
-	ModelGptO3Mini:         572,
-	ModelGptO1Mini:         572,
-
-	ModelClaudeOpus4:     9360,
-	ModelClaudeSonnet4:   1872,
-	ModelClaudeHaiku3_5:  499,
-	ModelClaudeOpus3:     9360,
-	ModelClaudeSonnet3_7: 1872,
-	ModelClaudeHaiku3:    182,
-
-	ModelDeepSeekR1: 142,
-	ModelDeepSeekV3: 242,
-
-	ModelGemini25FlashPreview: 380,
-	ModelGemini25ProPreview:   1820,
-	ModelGemini20Flash:        52,
-	ModelGemini20FlashLite:    39,
-	ModelGemini15Flash:        78,
-	ModelGemini15Flash8B:      39,
-	ModelGemini15Pro:          1300,
-
-	ModelMistralMedium3:  2496,
-	ModelMagistralMedium: 7280,
-	ModelCodestral:       1248,
-	ModelDevstralMedium:  2496,
-	ModelMistralLarge:    8320,
-	ModelPixtralLarge:    8320,
-	ModelMinistral8B2410: 208,
-	ModelMinistral3B2410: 83,
-	ModelMistralSmall3_2: 416,
-	ModelMagistralSmall:  2080,
-	ModelDevstralSmall:   416,
-	ModelPixtral12B:      312,
-	ModelMistralNemo:     312,
-}
 
 type Message struct {
 	Role    string `json:"role"`
